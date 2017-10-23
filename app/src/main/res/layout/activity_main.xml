@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.footballmatchscoreapp.MainActivity">
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/istock_000013741498_small_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:padding="4dp"
+                    android:src="@drawable/soccerplayer" />
+
+                <TextView
+                    android:id="@+id/team_one_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/imageView1"
+                    />
+
+                <TextView
+                    android:id="@+id/team_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="Team One"
+                    android:layout_below="@id/team_one_score"/>
+                <Button
+                    android:id="@+id/gole_team_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:onClick="addOneForTeamOne"
+                    android:text="+1 Points"
+                    android:layout_below="@id/team_one"
+                    />
+
+                <Button
+                    android:id="@+id/OffsidesOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:onClick="addOffsidesForTeamOne"
+                    android:text="Offsides"
+                    android:layout_below="@id/gole_team_one"
+                    android:layout_alignRight="@id/gole_team_one"/>
+                <TextView
+                    android:id="@+id/team_one_Offsides"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@id/OffsidesOne"
+                    android:layout_below="@id/gole_team_one"
+                    />
+
+
+                <Button
+                    android:id="@+id/CornersOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addCornersForTeamOne"
+                    android:text="Corners"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_below="@+id/OffsidesOne"
+                    android:layout_alignEnd="@+id/gole_team_one" />
+                <TextView
+                    android:id="@+id/team_one_Corners"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@id/CornersOne"
+                    android:layout_below="@id/team_one_Offsides"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:padding="4dp"
+                    android:src="@drawable/football" />
+
+                <TextView
+                    android:id="@+id/team_Two_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/imageView2"
+                    />
+
+                <TextView
+                    android:id="@+id/team_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="Team One"
+                    android:layout_below="@id/team_Two_score"/>
+                <Button
+                    android:id="@+id/gole_team_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:onClick="addOneForTeamTwo"
+                    android:text="+1 Points"
+                    android:layout_below="@id/team_two"
+                    />
+
+                <Button
+                    android:id="@+id/Offsidestwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:onClick="addOffsidesForTeamTwo"
+                    android:text="Offsides"
+                    android:layout_below="@id/gole_team_two"/>
+                <TextView
+                    android:id="@+id/team_two_Offsides"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/Offsidestwo"
+                    android:layout_below="@id/gole_team_two"
+                    />
+
+
+                <Button
+                    android:id="@+id/CornersTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:onClick="addCornersForTeamTwo"
+                    android:text="Corners"
+                    android:layout_below="@id/Offsidestwo"/>
+                <TextView
+                    android:id="@+id/team_two_Corners"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="4dp"
+                    android:text="0"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@id/CornersTwo"
+                    android:layout_below="@id/team_two_Offsides"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contextClickable="true"
+        android:text="Reset"
+        android:onClick="resetSore"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
